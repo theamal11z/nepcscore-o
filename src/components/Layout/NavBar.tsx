@@ -96,7 +96,7 @@ const NavBar: React.FC = () => {
             {user && (
               <div className="flex items-center ml-4">
                 <Link 
-                  to="/profile" 
+                  to={`/${user.role}/profile`} 
                   className="text-gray-300 hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center"
                 >
                   <User size={18} className="mr-1" />
@@ -165,7 +165,7 @@ const NavBar: React.FC = () => {
             {user && (
               <>
                 <Link 
-                  to="/profile" 
+                  to={`/${user.role}/profile`} 
                   onClick={closeMenu}
                   className="flex items-center text-gray-300 hover:bg-gray-800 hover:text-white px-3 py-2 rounded-md text-base font-medium"
                 >

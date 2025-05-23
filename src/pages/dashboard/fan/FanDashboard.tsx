@@ -5,7 +5,7 @@ import Button from '../../../components/UI/Button';
 import MatchCard from '../../../components/MatchCard';
 import PlayerCard from '../../../components/PlayerCard';
 import { useAuth } from '../../../context/AuthContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // Mock data
 const liveMatches = [
@@ -88,6 +88,7 @@ const topPlayers = [
 
 const FanDashboard: React.FC = () => {
   const { user } = useAuth();
+  const navigate = useNavigate();
   
   return (
     <div className="py-8">
@@ -178,7 +179,7 @@ const FanDashboard: React.FC = () => {
               <MatchCard 
                 key={match.id} 
                 match={match} 
-                onClick={() => console.log('View match', match.id)}
+                onClick={() => navigate(`/fan/match/${match.id}`)}
               />
             ))}
           </div>
@@ -206,7 +207,7 @@ const FanDashboard: React.FC = () => {
                 <MatchCard 
                   key={match.id} 
                   match={match} 
-                  onClick={() => console.log('View match', match.id)}
+                  onClick={() => navigate(`/fan/match/${match.id}`)}
                 />
               ))}
             </div>

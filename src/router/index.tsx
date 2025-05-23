@@ -24,6 +24,7 @@ import LiveMatchesPage from '../pages/dashboard/fan/LiveMatchesPage';
 import PlayersPage from '../pages/dashboard/fan/PlayersPage';
 import SchedulePage from '../pages/dashboard/fan/SchedulePage';
 import MatchDetailsPage from '../pages/dashboard/fan/MatchDetailsPage';
+import FanProfilePage from '../pages/profile/FanProfilePage';
 import OrganizerDashboard from '../pages/dashboard/organizer/OrganizerDashboard';
 import AdminDashboard from '../pages/dashboard/admin/AdminDashboard';
 import PlayerDashboard from '../pages/dashboard/player/PlayerDashboard';
@@ -59,6 +60,7 @@ const router = createBrowserRouter([
       { path: 'players', element: <PlayersPage /> },
       { path: 'schedule', element: <SchedulePage /> },
       { path: 'match/:matchId', element: <MatchDetailsPage /> },
+      { path: 'profile', element: <FanProfilePage /> },
     ],
   },
   {

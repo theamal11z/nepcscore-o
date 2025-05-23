@@ -4,6 +4,7 @@ import Card from '../../../components/UI/Card';
 import MatchCard from '../../../components/MatchCard';
 import Button from '../../../components/UI/Button';
 import { Match } from '../../../types';
+import { useNavigate } from 'react-router-dom';
 
 // Mock data
 const liveMatches: Match[] = [
@@ -49,6 +50,7 @@ const liveMatches: Match[] = [
 ];
 
 const LiveMatchesPage: React.FC = () => {
+  const navigate = useNavigate();
   const [filter, setFilter] = useState<'all' | 't20' | 'odi'>('all');
 
   const filteredMatches = liveMatches.filter(match => {
@@ -96,7 +98,7 @@ const LiveMatchesPage: React.FC = () => {
             <MatchCard 
               key={match.id} 
               match={match} 
-              onClick={() => console.log('Navigate to match details', match.id)}
+              onClick={() => navigate(`/fan/match/${match.id}`)}
             />
           ))}
         </div>
