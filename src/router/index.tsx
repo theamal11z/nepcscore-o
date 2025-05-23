@@ -28,6 +28,11 @@ import FanProfilePage from '../pages/profile/FanProfilePage';
 import OrganizerDashboard from '../pages/dashboard/organizer/OrganizerDashboard';
 import AdminDashboard from '../pages/dashboard/admin/AdminDashboard';
 import PlayerDashboard from '../pages/dashboard/player/PlayerDashboard';
+import PlayerStats from '../pages/dashboard/player/PlayerStats';
+import PlayerSchedule from '../pages/dashboard/player/PlayerSchedule';
+import PlayerHistory from '../pages/dashboard/player/PlayerHistory';
+import PlayerProfile from '../pages/dashboard/player/PlayerProfile';
+import PlayerSettings from '../pages/dashboard/player/PlayerSettings';
 
 // Error Pages
 import NotFoundPage from '../pages/error/NotFoundPage';
@@ -87,6 +92,11 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Navigate to="/player/dashboard" replace /> },
       { path: 'dashboard', element: <PlayerDashboard /> },
+      { path: 'stats', element: <PlayerStats /> },
+      { path: 'schedule', element: <PlayerSchedule /> },
+      { path: 'history', element: <PlayerHistory /> },
+      { path: 'profile', element: <PlayerProfile /> },
+      { path: 'settings', element: <PlayerSettings /> },
       // Add more player routes here
     ],
   },
